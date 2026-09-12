@@ -158,7 +158,7 @@ function main() {
     return cx_sqr(z) + c;
   }
   VEC2 burning_ship(VEC2 z, VEC2 c) {
-    return VEC2(-1 * ((abs(z.x) * z.x * z.x) + (3 * z.x * abs(z.y) * z.y)), ((-3 * z.x * z.x * abs(z.y)) - (z.y * z.y * z.y))) + c;
+    return VEC2(abs(z.x * abs(z.x) + z.y * z.y), z.x * abs(z.y) * -2.0) + c;
   }
   VEC2 feather(VEC2 z, VEC2 c) {
     return cx_div(cx_cube(z), cx_one + z*z) + c;
