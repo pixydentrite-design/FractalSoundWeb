@@ -3,7 +3,10 @@ function mandelbrot(x, y, cx, cy) {
 }
 
 function burning_ship(x, y, cx, cy) {
-  return {x: x*x - y*y + cx, y: 2.0*Math.abs(x*y) + cy};
+  return {
+        x: (Math.abs(x) * Math.abs(x) + y * y) + cx,
+        y: ((x * Math.abs(y)) * -2.0) + cy
+    };
 }
 
 function feather(x, y, cx, cy) {
