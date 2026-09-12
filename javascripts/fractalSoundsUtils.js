@@ -4,7 +4,7 @@ function mandelbrot(x, y, cx, cy) {
 
 function burning_ship(x, y, cx, cy) {
   return {
-        x: (Math.abs(x) * Math.abs(x) + y * y) + cx, y: ((x * Math.abs(y)) * -2.0) + cy
+        x: (Math.abs(x) * Math.abs(x) - Math.abs(y) * Math.abs(y)) + cx, y: (-2.0 * Math.abs(x) * Math.abs(y)) + cy
     };
 }
 
